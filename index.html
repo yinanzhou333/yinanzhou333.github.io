@@ -11,16 +11,13 @@
             color: #333;
             margin: 0;
             padding: 0;
-            text-align: center;
         }
 
         header {
-            background-color: #3498db;
-            padding: 20px;
-            color: #fff;
             font-size: 16px;
+            text-align: center;
         }
-
+        
         section {
             max-width: 800px;
             margin: 20px auto;
@@ -40,6 +37,17 @@
             margin-bottom: 20px;
         }
 
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            column-count: 2;
+            column-gap: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
         .grid-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -47,30 +55,48 @@
         }
 
         .grid-item {
-            background-color: #3498db;
-            color: #fff;
+            background-color: #fff;
+            color: #333;
             padding: 20px;
+            border: 1px solid #3498db;
             border-radius: 8px;
+            text-align: center;
+        }
+
+        .grid-item h3 {
+            margin-top: 0;
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
         }
 
         footer {
             background-color: #3498db;
             color: #fff;
             padding: 10px;
+            text-align: center;
             position: fixed;
             bottom: 0;
             width: 100%;
         }
 
         a {
-            color: #fff;
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Profile</h1>
+        <h1>Welcome to My Homepage</h1>
     </header>
 
     <section>
@@ -84,11 +110,10 @@
         <h2>Skills</h2>
         <p>
             <ul>
-            	<li>Data analysis</li>
-                <li>Data visualization</li>
-                <li>Accounting and Financial Reporting</li>
+            	<li>Data analysis and visualization</li>
                 <li>Communication and collaboration</li>
-                <li>Linux operating system</li>
+                <li>Accounting and financial reporting</li>
+                <li>Scripting in Linux</li>
             </ul>
         </p>
     </section>
@@ -97,30 +122,36 @@
         <h2>Projects</h2>
         <div class="grid-container">
             <div class="grid-item">
-                <h3>Business Analysis</h3>
-                <p>Data mining/modeling/visualization for business problems <a href="https://github.com/yinanzhou333/DataAnalytics" target="_blank">projects</a></p>
+                <h3>Data Analysis</h3>
+                <img src="https://github.com/user-attachments/assets/6ccfc996-579c-46f6-807e-c075a660965f" alt="Business Analysis Project">
+                <p>Prediction by regression models <a href="https://github.com/yinanzhou333/loan_default_prediction" target="_blank">View Project</a></p>
+                <p>Project benifit-cost ratio analysis <a href="https://github.com/yinanzhou333/benifit_cost_analysis" target="_blank">View Project</a></p>
+                <p>Time series analysis <a href="https://github.com/yinanzhou333/forecast_time_series" target="_blank">View Project</a></p>
             </div>
 
             <div class="grid-item">
-                <h3>PINN</h3>
-                <p>Physical informed neural network. <a href="https://github.com/yinanzhou333/PINN" target="_blank">PINN</a></p>
+                <h3>Data Visualization</h3>
+                <img src="https://github.com/user-attachments/assets/0f204e9f-c737-453d-a520-5238e8020795" alt="PINN Project">
+                <p>Tableau dashboard <a href="https://github.com/yinanzhou333/data_visualization" target="_blank">View Project</a></p>
             </div>
 
             <div class="grid-item">
-                <h3>Reinforcement Learning</h3>
-                <p>Reinforcement learning with examples. <a href="https://github.com/yinanzhou333/RL_examples" target="_blank">RL</a></p>
+                <h3>Database Management</h3>
+                <img src="https://github.com/user-attachments/assets/460df039-e435-4db2-89ab-3ba92b38c6b2" alt="Reinforcement Learning Project">
+                <p>SQL table design and analysis. <a href="https://github.com/yinanzhou333/us-stock-database/tree/main" target="_blank">View Project</a></p>
             </div>
 
             <div class="grid-item">
-                <h3>Utilities</h3>
-                <p>Scripts to make life easier. <a href="https://github.com/yinanzhou333/MyUtils" target="_blank">MyUtils</a></p>
+                <h3>Linux Utilities</h3>
+                <img src="https://github.com/user-attachments/assets/62eaae1f-3307-4e96-9da2-8460ece7c8fc" alt="Utilities Project">
+                <p>Scripts make life easier. <a href="https://github.com/yinanzhou333/MyUtils" target="_blank">View Project</a></p>
             </div>
         </div>
     </section>
 
 
     <footer>
-        &copy; 2024 Elaine(Yinan) Zhou | Find me on <a href="https://github.com/yinanzhou333" target="_blank">GitHub</a>
+        &copy; 2024 Elaine (Yinan) Zhou | Find me on <a href="https://github.com/yinanzhou333" target="_blank">GitHub</a>
     </footer>
 </body>
 </html>
