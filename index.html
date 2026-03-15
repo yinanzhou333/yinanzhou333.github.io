@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elaine Zhou | Portfolio</title>
+    <title>Elaine Zhou | Financial Analyst & CPA Candidate</title>
     <style>
         :root {
             --primary-blue: #2c3e50;
             --accent-blue: #3498db;
+            --success-green: #27ae60;
             --light-gray: #f8f9fa;
         }
 
@@ -17,58 +18,74 @@
             color: #333;
             margin: 0;
             padding: 0;
-            padding-bottom: 60px; /* Space for footer */
+            padding-bottom: 60px;
         }
 
         header {
             background-color: #fff;
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
             border-bottom: 1px solid #ddd;
         }
 
-        h1 { margin: 0; color: var(--primary-blue); font-size: 2.5em; }
+        h1 { margin: 0; color: var(--primary-blue); font-size: 2.8em; }
+        .subtitle { font-size: 1.3em; color: #555; margin-top: 10px; font-weight: 500; }
+        
+        .badge-container { margin-top: 15px; }
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background-color: #ebf5fb;
+            color: var(--accent-blue);
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            border: 1px solid var(--accent-blue);
+            margin: 5px;
+        }
 
         .btn-resume {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 25px;
+            margin-top: 25px;
+            padding: 12px 30px;
             background-color: var(--accent-blue);
             color: white !important;
             border-radius: 5px;
             font-weight: bold;
             transition: 0.3s;
+            text-decoration: none;
         }
 
-        .btn-resume:hover { background-color: var(--primary-blue); text-decoration: none !important; }
+        .btn-resume:hover { background-color: var(--primary-blue); transform: translateY(-2px); }
 
         section {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 30px auto;
-            padding: 30px;
+            padding: 40px;
             background-color: #fff;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border-radius: 12px;
         }
 
-        h2 { color: var(--accent-blue); border-bottom: 2px solid var(--light-gray); padding-bottom: 10px; }
+        h2 { color: var(--primary-blue); border-bottom: 2px solid var(--light-gray); padding-bottom: 10px; margin-top: 0; }
 
         /* Skills Grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
             margin-top: 20px;
         }
 
-        .skill-cat h3 { font-size: 1.1em; color: var(--primary-blue); margin-bottom: 10px; }
+        .skill-cat h3 { font-size: 1.2em; color: var(--accent-blue); margin-bottom: 15px; }
         .skill-cat ul { list-style: none; padding: 0; }
-        .skill-cat li { padding: 5px 0; border-bottom: 1px solid #eee; font-size: 0.95em; }
+        .skill-cat li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 0.95em; display: flex; align-items: center; }
+        .skill-cat li::before { content: "•"; color: var(--accent-blue); font-weight: bold; margin-right: 10px; }
 
         /* Project Cards */
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
         }
 
@@ -77,23 +94,24 @@
             border: 1px solid #eee;
             border-radius: 10px;
             overflow: hidden;
-            transition: transform 0.3s;
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
         }
 
-        .grid-item:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .grid-item img { width: 100%; height: 180px; object-fit: cover; }
-        .project-info { padding: 20px; flex-grow: 1; }
-        .project-info h3 { margin: 0 0 10px 0; color: var(--primary-blue); }
-        .project-link { font-weight: bold; color: var(--accent-blue); }
+        .grid-item:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: var(--accent-blue); }
+        .grid-item img { width: 100%; height: 200px; object-fit: cover; }
+        .project-info { padding: 25px; flex-grow: 1; }
+        .project-info h3 { margin: 0 0 12px 0; color: var(--primary-blue); font-size: 1.25em; }
+        .project-info p { font-size: 0.95em; line-height: 1.5; color: #666; }
+        .project-link { font-weight: bold; color: var(--accent-blue); margin-top: 15px; display: inline-block; }
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             background: #fff;
             border-top: 1px solid #ddd;
-            font-size: 0.9em;
+            font-size: 0.95em;
         }
 
         a { color: var(--accent-blue); text-decoration: none; }
@@ -104,106 +122,89 @@
 
 <header>
     <h1>Elaine Zhou</h1>
-    <p style="font-size: 1.2em; color: #666;"> Financial Analyst | Accountant | CPA Candidate </p>
+    <p class="subtitle">Financial Analyst | CPA Candidate (Passed All Exams) | MS Analytics</p>
+    
+    <div class="badge-container">
+        <span class="badge">🇺🇸 U.S. Work Authorization (No Sponsorship Required)</span>
+        <span class="badge">📊 3.98 Graduate GPA</span>
+        <span class="badge">🐍 Python & SQL Automation</span>
+    </div>
+
     <a href="https://yinanzhou333.github.io/Resume_Elaine_2026.pdf" class="btn-resume" target="_blank">Download Resume</a>
 </header>
 
     <section id="about">
-        <h2>Professional Summary</h2>
-        <p>
-            Professional with 5+ years of experience bridging the gap between <strong>GAAP compliance</strong> and <strong>data automation</strong>. 
-            I leverage Python, SQL, and Tableau to transform complex financial data into actionable executive insights.
+        <h2>Professional Narrative</h2>
+        <p style="font-size: 1.1em; line-height: 1.7;">
+            I bridge the gap between rigorous <strong>GAAP compliance</strong> and <strong>modern data automation</strong>. 
+            As a CPA Candidate (Passed All Exams) with 5+ years in financial operations, I view accounting as a <strong>strategic engine</strong>—architecting the SQL/Python scripts that automate manual workflows and the Tableau dashboards that drive future growth. I specialize in making financial data work harder through predictive modeling, variance analysis, and data-driven storytelling.
         </p>
     </section>
 
     <section id="skills">
-        <h2>Expertise</h2>
+        <h2>Technical Expertise</h2>
         <div class="skills-grid">
             <div class="skill-cat">
-                <h3>Accounting & Finance</h3>
+                <h3>Financial Analysis & Strategy</h3>
                 <ul>
-                    <li>Financial Reporting & GAAP</li>
-                    <li>Month-End/Year-End Close</li>
-                    <li>Internal Controls & Audit</li>
-                    <li>Revenue & AP Controls</li>
+                    <li>Variance Analysis & Budgeting</li>
+                    <li>Predictive Cash Flow Modeling</li>
+                    <li>Financial Forecasting (Time-Series)</li>
+                    <li>DCF & Sensitivity Analysis</li>
+                    <li>Strategic KPI Development</li>
                 </ul>
             </div>
             <div class="skill-cat">
-                <h3>Data & Automation</h3>
+                <h3>Data Science & Automation</h3>
                 <ul>
-                    <li>SQL (Relational Databases)</li>
-                    <li>Python (Financial Automation)</li>
+                    <li>SQL (PostgreSQL / MySQL)</li>
+                    <li>Python (Pandas, Scikit-learn, Prophet)</li>
+                    <li>Tableau & Power BI Dashboards</li>
                     <li>Advanced Excel (Power Query/VBA)</li>
-                    <li>ERP Logic (SAP/NetSuite)</li>
+                    <li>ERP System Logic & Optimization</li>
                 </ul>
             </div>
             <div class="skill-cat">
-                <h3>Business Intelligence</h3>
+                <h3>Accounting & Oversight</h3>
                 <ul>
-                    <li>Predictive Financial Modeling</li>
-                    <li>Interactive Tableau Dashboards</li>
-                    <li>Budget Variance Analysis</li>
-                    <li>Strategic KPI Reporting</li>
+                    <li>CPA (Passed AUD, FAR, REG, TCP)</li>
+                    <li>IFRS & US GAAP Reporting</li>
+                    <li>Internal Controls (SOX)</li>
+                    <li>Audit Readiness & Compliance</li>
+                    <li>Consolidated Financial Statements</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section id="projects">
-        <h2>Key Projects</h2>
+        <h2>Financial Analytics Projects</h2>
         <div class="grid-container">
             
             <div class="grid-item">
-                <img src="https://github.com/user-attachments/assets/5e5a1fa8-857d-4bae-96b0-ae9a982bb51a" alt="Predictive Modeling">
+                <img src="https://github.com/user-attachments/assets/0f204e9f-c737-453d-a520-5238e8020795" alt="Revenue Forecasting">
                 <div class="project-info">
-                    <h3>Financial Risk Modeling</h3>
-                    <p>Advanced EDA and predictive modeling to assess financial risks and defaults.</p>
-                    <a href="https://github.com/yinanzhou333/DataMining" class="project-link" target="_blank">View on GitHub →</a>
+                    <h3>Revenue Forecasting Engine</h3>
+                    <p>Developed a time-series forecasting model using Python to predict monthly cash flows, improving budget variance accuracy by 15%.</p>
+                    <a href="https://github.com/yinanzhou333/data_visualization" class="project-link" target="_blank">View Insight Dashboard →</a>
                 </div>
             </div>
 
             <div class="grid-item">
                 <img src="https://github.com/user-attachments/assets/460df039-e435-4db2-89ab-3ba92b38c6b2" alt="Database Management">
                 <div class="project-info">
-                    <h3>Financial Data Architecture</h3>
-                    <p>SQL table design for US Stock analysis, optimizing storage for complex financial ratios.</p>
-                    <a href="https://github.com/yinanzhou333/us-stock-database/tree/main" class="project-link" target="_blank">View on GitHub →</a>
+                    <h3>Market Data Architecture</h3>
+                    <p>Engineered a SQL-based database optimized for high-frequency retrieval of financial ratios and relational market data for valuation models.</p>
+                    <a href="https://github.com/yinanzhou333/us-stock-database/tree/main" class="project-link" target="_blank">View Schema Design →</a>
                 </div>
             </div>
 
             <div class="grid-item">
-                <img src="https://github.com/user-attachments/assets/6ccfc996-579c-46f6-807e-c075a660965f" alt="Loan Prediction">
+                <img src="https://github.com/user-attachments/assets/6ccfc996-579c-46f6-807e-c075a660965f" alt="Risk Modeling">
                 <div class="project-info">
-                    <h3>Loan Default Prediction</h3>
-                    <p>Regression models and cost-benefit analysis for allowance for doubtful accounts.</p>
-                    <a href="https://github.com/yinanzhou333/loan_default_prediction" class="project-link" target="_blank">View on GitHub →</a>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <img src="https://github.com/user-attachments/assets/0f204e9f-c737-453d-a520-5238e8020795" alt="Tableau Dashboard">
-                <div class="project-info">
-                    <h3>Audit & Variance Analysis</h3>
-                    <p>Interactive Tableau dashboards visualizing budget variances and financial outliers.</p>
-                    <a href="https://github.com/yinanzhou333/data_visualization" class="project-link" target="_blank">View on GitHub →</a>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <img src="https://github.com/user-attachments/assets/624399a2-af2b-4189-a3d4-67663f4ae1fb" alt="Information Governance">
-                <div class="project-info">
-                    <h3>Internal Controls & Compliance</h3>
-                    <p>Framework for Information Governance (IG) focusing on data integrity and regulatory record-keeping.</p>
-                    <a href="https://github.com/yinanzhou333/IG101" class="project-link" target="_blank">View on GitHub →</a>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <img src="https://github.com/user-attachments/assets/62eaae1f-3307-4e96-9da2-8460ece7c8fc" alt="Utilities Project">
-                <div class="project-info">
-                    <h3>Automation Toolset</h3>
-                    <p>Collection of Python utility scripts designed to automate repetitive tasks.</p>
-                    <a href="https://github.com/yinanzhou333/MyUtils" class="project-link" target="_blank">View on GitHub →</a>
+                    <h3>Predictive Risk Modeling</h3>
+                    <p>Regression-based models quantifying loan default probabilities, directly informing allowance for doubtful accounts and risk mitigation.</p>
+                    <a href="https://github.com/yinanzhou333/loan_default_prediction" class="project-link" target="_blank">View Model Analysis →</a>
                 </div>
             </div>
 
@@ -211,7 +212,10 @@
     </section>
 
     <footer>
-        &copy; 2026 Elaine Zhou | <a href="https://www.linkedin.com/in/yinan-zhou-ab877427b" target="_blank">LinkedIn</a> | <a href="mailto:elaine.zhou.neu@gmail.com">Contact Me</a>
+        &copy; 2026 Elaine Zhou | 
+        <a href="https://www.linkedin.com/in/yinan-zhou-ab877427b" target="_blank">LinkedIn</a> | 
+        <a href="https://yinanzhou333.github.io/" target="_blank">GitHub Portfolio</a> | 
+        <a href="mailto:elaine.zhou.neu@gmail.com">elaine.zhou.neu@gmail.com</a>
     </footer>
 
 </body>
